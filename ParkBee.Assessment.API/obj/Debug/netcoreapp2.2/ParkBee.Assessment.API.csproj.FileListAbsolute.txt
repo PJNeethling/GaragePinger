@@ -1,0 +1,16 @@
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\bin\Debug\netcoreapp2.2\ParkBee.Assessment.API.deps.json
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\bin\Debug\netcoreapp2.2\ParkBee.Assessment.API.runtimeconfig.json
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\bin\Debug\netcoreapp2.2\ParkBee.Assessment.API.runtimeconfig.dev.json
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\bin\Debug\netcoreapp2.2\ParkBee.Assessment.API.dll
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\bin\Debug\netcoreapp2.2\ParkBee.Assessment.API.pdb
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\obj\Debug\netcoreapp2.2\ParkBee.Assessment.API.csprojAssemblyReference.cache
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\obj\Debug\netcoreapp2.2\ParkBee.Assessment.API.RazorAssemblyInfo.cache
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\obj\Debug\netcoreapp2.2\ParkBee.Assessment.API.RazorAssemblyInfo.cs
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\obj\Debug\netcoreapp2.2\ParkBee.Assessment.API.AssemblyInfoInputs.cache
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\obj\Debug\netcoreapp2.2\ParkBee.Assessment.API.AssemblyInfo.cs
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\obj\Debug\netcoreapp2.2\ParkBee.Assessment.API.RazorTargetAssemblyInfo.cache
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\obj\Debug\netcoreapp2.2\ParkBee.Assessment.API.dll
+C:\Dev\GarageChecker\backend\ParkBee.Assessment.API\obj\Debug\netcoreapp2.2\ParkBee.Assessment.API.pdb

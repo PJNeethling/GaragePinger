@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "DoorStatusHistory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<table class="table table-responsive table-borderless " id="tblDoorStatusHistory">
+    <thead>
+        <tr>
+            <td>
+                Door Name
+            </td>
+            <td>
+                Status Description
+            </td>
+            <td>
+                Modified Date
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Loading...
+            </td>
+            <td>
+                Loading...
+            </td>
+            <td>
+                Loading...
+            </td>
+            <td>
+                Loading...
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.getJSON("/DoorStatusHistory/GetDoorStatusHistoryList", function (historyList) {
+
+            $('#tblDoorStatusHistory tbody tr').remove();
+            historyList.forEach(element => {
+                var date = new Date(element.modifiedDate);
+
+                $('#tblDoorStatusHistory tbody').append("<tr>"
+                    + " <td>" + element.doorName + "</td>"
+                    + " <td>" + element.description + "</td>"
+                    + " <td>" + date + "</td>"
+                    + " </tr>");
+            });
+
+        });
+    });
+
+</script>

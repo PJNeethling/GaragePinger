@@ -1,0 +1,148 @@
+﻿@{
+    ViewBag.Title = "Garages";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<table class="table table-responsive table-borderless " id="tblGarage">
+    <thead>
+        <tr>
+            <td>
+                Status
+            </td>
+            <td>
+                Name
+            </td>
+            <td>
+                Address
+            </td>
+            <td>
+                Refresh
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Loading...
+            </td>
+            <td>
+                Loading...
+            </td>
+            <td>
+                Loading...
+            </td>
+            <td>
+                Loading...
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $.getJSON("/Garages/GetUserGarageInformation", function (garage) {
+            $('#tblGarage tbody tr').remove();
+            SetGarageInformation(garage);
+        });
+
+        $(document).on('click', '#tblGarage button[name=refreshGarage]', function (e) {
+            var $tableBody = $(this).parents('table tbody');
+            var garageID = $(this).closest('tr').data('id');
+
+            $tableBody.find('tr:gt(0)').remove();
+            $tableBody.find('tr').find('td').text('Loading...');
+
+            $.getJSON("/Garages/RefreshGarage/" + garageID, function (garage) {
+                SetGarageInformation(garage);
+                $tableBody.find('tr:first').remove();
+            });
+        });
+
+        $(document).on('click', '#tblGarage button[name=refreshDoor]', function (e) {
+            var $tr = $(this).closest('tr');
+            var doorID = $tr.data('id');
+            var $doorName = $tr.find('span[name=doorName]');
+            var $doorStatus = $tr.find('i[name=doorStatus]');
+
+            $doorStatus.replaceWith("<i class='fa fa-spinner fa-spin' aria-hidden='true'></i>");
+
+            $.getJSON("/Door/PingDoor/" + doorID, function (doorResult) {
+                RefreshDoor(doorID, $tr, $doorName.text(), doorResult);
+            });
+        });
+
+        function SetGarageInformation(garage) {
+            var text = "";
+            var garageStatusHtml = "";
+            var isGarageOnline = garage.isOnline;
+
+            garage.doors.forEach(element => {
+                var doorStatusHtml = "";
+                var isDoorOnline = element.isOnline;
+
+                if (isDoorOnline) {
+                    doorStatusHtml = "<i name='doorStatus' class='fa fa-circle text-success' aria-hidden='true'></i>";
+                } else {
+                    doorStatusHtml = "<i name='doorStatus' class='fa fa-circle text-danger' aria-hidden='true'></i>";
+                }
+
+                text += " <tr name='door' data-id=" + element.id + ">"
+                    + "<td></td>"
+                    + " <td colspan='2'>"
+                    + " <div id='collapseOne' class='collapse in'>"
+                    + doorStatusHtml
+                    + "<span style='padding-left: 10px;' name='doorName'>" + element.name + "</span>"
+                    + "<button name='refreshDoor' class='btn-primary' style='border-radius: 10px; float: right;'><i class='fa fa-refresh' aria-hidden='true'></i></button>"
+                    + " </div>"
+                    + " </td>"
+                    + " <br />"
+                    + " </tr>";
+            });
+
+            if (isGarageOnline) {
+                garageStatusHtml = "<i name='garageStatus' class='fa fa-circle text-success' aria-hidden='true'></i>";
+            }
+            else {
+                garageStatusHtml = "<i name='garageStatus' class='fa fa-circle text-danger' aria-hidden='true'></i>";
+            }
+
+            $('#tblGarage tbody').append("<tr name='garage' class='accordion-toggle' data-toggle='collapse' data-target='#collapseOne' data-id=" + garage.id + ">"
+                + " <td>" + garageStatusHtml + "</td>"
+                + " <td>" + garage.name + "</td>"
+                + " <td>" + garage.address + "</td>"
+                + " <td><button name='refreshGarage' class='btn-primary' style='border-radius: 10px;'><i class='fa fa-refresh' aria-hidden='true'></i></button></td>"
+                + " </tr>"
+                + text);
+        };
+
+        function RefreshDoor(doorID, $tr, doorName, doorResult) {
+            var text = "";
+            var doorStatusHtml = "";
+            var isDoorOnline = doorResult.isOnline;
+
+            if (isDoorOnline) {
+                doorStatusHtml = "<i name='doorStatus' class='fa fa-circle text-success' aria-hidden='true'></i>";
+            }
+            else {
+                doorStatusHtml = "<i name='doorStatus' class='fa fa-circle text-danger' aria-hidden='true'></i>";
+            }
+
+            text = " <tr name='door' data-id=" + doorID + ">"
+                + "<td></td>"
+                + " <td colspan='2'>"
+                + " <div id='collapseOne' class='in collapse show'>"
+                + doorStatusHtml
+                + "<span style='padding-left: 10px;' name='doorName'>" + doorName + "</span>"
+                + "<button name='refreshDoor' class='btn-primary' style='border-radius: 10px; float: right;'><i class='fa fa-refresh' aria-hidden='true'></i></button>"
+                + " <br />"
+                + " </div>"
+                + " </td>"
+                + " </tr>";
+
+            $tr.replaceWith(text);
+        };
+    });
+
+</script>

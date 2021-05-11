@@ -1,0 +1,8 @@
+C:\Dev\GarageChecker\backend\ParkBee.Assesment.Framework\bin\Debug\netcoreapp3.1\ParkBee.Assesment.Framework.deps.json
+C:\Dev\GarageChecker\backend\ParkBee.Assesment.Framework\bin\Debug\netcoreapp3.1\ParkBee.Assesment.Framework.dll
+C:\Dev\GarageChecker\backend\ParkBee.Assesment.Framework\bin\Debug\netcoreapp3.1\ParkBee.Assesment.Framework.pdb
+C:\Dev\GarageChecker\backend\ParkBee.Assesment.Framework\obj\Debug\netcoreapp3.1\ParkBee.Assesment.Framework.csprojAssemblyReference.cache
+C:\Dev\GarageChecker\backend\ParkBee.Assesment.Framework\obj\Debug\netcoreapp3.1\ParkBee.Assesment.Framework.AssemblyInfoInputs.cache
+C:\Dev\GarageChecker\backend\ParkBee.Assesment.Framework\obj\Debug\netcoreapp3.1\ParkBee.Assesment.Framework.AssemblyInfo.cs
+C:\Dev\GarageChecker\backend\ParkBee.Assesment.Framework\obj\Debug\netcoreapp3.1\ParkBee.Assesment.Framework.dll
+C:\Dev\GarageChecker\backend\ParkBee.Assesment.Framework\obj\Debug\netcoreapp3.1\ParkBee.Assesment.Framework.pdb

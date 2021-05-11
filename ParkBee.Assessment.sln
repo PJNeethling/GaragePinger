@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkBee.Assessment.API", "ParkBee.Assessment.API\ParkBee.Assessment.API.csproj", "{4BFFB24D-7316-4054-8145-460F15BB35CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkBee.Assesment.Website", "ParkBee.Assesment.Website\ParkBee.Assesment.Website.csproj", "{9EE3F287-CD5E-4063-AB3D-356FD8BABE47}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkBee.Assesment.Framework", "ParkBee.Assesment.Framework\ParkBee.Assesment.Framework.csproj", "{DB2528CE-D227-4189-9505-835187FB9F4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkBee.Assesment.Tests", "ParkBee.Assesment.Tests\ParkBee.Assesment.Tests.csproj", "{9A944927-6709-4817-AB5D-BB2ADCA34957}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BFFB24D-7316-4054-8145-460F15BB35CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BFFB24D-7316-4054-8145-460F15BB35CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BFFB24D-7316-4054-8145-460F15BB35CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BFFB24D-7316-4054-8145-460F15BB35CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EE3F287-CD5E-4063-AB3D-356FD8BABE47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE3F287-CD5E-4063-AB3D-356FD8BABE47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE3F287-CD5E-4063-AB3D-356FD8BABE47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE3F287-CD5E-4063-AB3D-356FD8BABE47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB2528CE-D227-4189-9505-835187FB9F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB2528CE-D227-4189-9505-835187FB9F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB2528CE-D227-4189-9505-835187FB9F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB2528CE-D227-4189-9505-835187FB9F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A944927-6709-4817-AB5D-BB2ADCA34957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A944927-6709-4817-AB5D-BB2ADCA34957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A944927-6709-4817-AB5D-BB2ADCA34957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A944927-6709-4817-AB5D-BB2ADCA34957}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B72F6EFF-5826-496D-B7A9-7FA4207DFC93}
+	EndGlobalSection
+EndGlobal

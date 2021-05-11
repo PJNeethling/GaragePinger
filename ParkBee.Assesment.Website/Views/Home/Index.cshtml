@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .custom-button {
+        border-radius: 20px;
+        height: 100px;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Hi</h1>
+    <p>Please find below my assesment</p>
+</div>
+
+<br /> <br /> <br />
+
+<div class="text-center">
+    <input type="button" class="btn-primary custom-button" value="My Garage" onclick="location.href='@Url.Action("Index", "Garages")'" />
+    <input type="button" class="btn-primary custom-button" value="Door Status History" onclick="location.href='@Url.Action("Index", "DoorStatusHistory")'" />
+</div>
+
+<div class="text-left">
+    <h1 class="display-4"><b>My Garage</b></h1>
+    <p>• Getting the garage details (Garage is based on the token's garage id)</p>
+    <p>• All the doors for the garage is also listed (Click on the garage and the list will appear)</p>
+    <p>• You are able to refresh the garage using the refresh button</p>
+    <p>• You can also refresh each door usng the refresh button (This will ping each door separately)</p>
+
+    <br /> <br /> <br /> <br />
+
+    <h1 class="display-4"><b>Door Status History</b></h1>
+    <p>• This will display the history of all the door status changes.</p>
+
+    <br /> <br /> <br /> <br />
+
+    <h1 class="display-4"><b>Ad-Hoc</b></h1>
+    <p>• To test the history status, do the following.</p>
+    <p>• Make sure the ip assigned to a door is the same as your local network computer ip or any other device (Startup.cs file in the api project).</p>
+</div>
